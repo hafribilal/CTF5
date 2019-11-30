@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #1A1C24;
+  overflow: hidden;
+  position: relative;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.g {
+  display: flex;
+  flex-direction: row;
+}
+
+.box {
+  height: 20vh;
+  width: 22vh;
+  /* border: 1px solid white; */
+  /* box-shadow: 1px 1px 6px black; */
+}
+
+/* IDEA: Group one of boxes (background changes) */
+.g1 .b1 {
+  background: #202F32;
+}
+
+.g1 .b2 {
+  background: #203533;
+}
+
+.g1 .b3 {
+  background: #1B1F26;
+}
+
+/* IDEA: Group two of boxes (background changes) */
+.g2 .b1 {
+  background: ##213634;
+}
+
+.g2 .b2 {
+  background: #1D292C;
+}
+
+/* IDEA: Group tree of boxes (background changes) */
+.g3 .b1 {
+  background: #203332;
+}
+
+/* IDEA: Group for of boxes (background changes) */
+.g4 .b1 {
+  background: #1C2529;
+}
+
+/* IDEA: Logo position */
+#five {
+  position: absolute;
+  right: 50px;
+  top: 40%;
+  z-index: -1;
+  transition: top 1s ease-out;
+}
+
+#logo {
+  z-index: 1;
+  position: absolute;
+  top: 40px;
+  margin-left: 20px;
+  left: 20vh;
+  width: 20vw;
+}
+
+#ofppt {
+  width: 70px;
+}
+
+@keyframes movedown {
+  0% {
+    margin: -50%;
+  }
+
+  100% {
+    margin: 0;
+  }
+}
+
+/* IDEA: Aside bar */
+aside {
+  background: #00D080;
+  width: 5px;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  transition: width 500ms ease-out;
+  transition: opacity 500ms ease;
+}
+
+aside ::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  right: 109px;
+  z-index: -1;
+  height: 40px;
+  width: 290px;
+  background: rgb(44, 113, 59);
+  border-radius: 30px;
+  transition: width 500ms ease-out;
+  transition: opacity 500ms ease;
+}
+
+.signin, .signup {
+  display: none;
+}
+
+aside form {
+  height: 70vh;
+  margin: 50px 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* opacity: 1; */
+}
+
+aside #check {
+  margin: 20px 10px;
+  width: 70%;
+}
+
+aside button {
+  width: 70%;
+  height: 50px;
+  padding: 0 10px;
+  font-size: 2em;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  background: #202F32;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+aside button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+  transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+
+aside button:hover::after, aside button:focus::after {
+  animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}
+
+aside form input[type=text], aside form input[type=password] {
+  font-size: 2em;
+  padding: 10px;
+  margin: 5px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+}
+
+/* IDEA: navigation bar */
+nav {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  z-index: 1;
+  transition: width 500ms ease;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a {
+  font-weight: bold;
+  position: relative;
+}
+
+nav a ::before {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  background: #17c853;
+}
+
+nav img {
+  width: 20px;
+  padding: 5px;
+  margin-bottom: -7px;
+}
+
+nav td {
+  width: 200px;
+  text-align: center;
+}
+
+.selected {
+  background: #00D080;
+  width: 150px;
+  transition: width 500ms ease;
+}
+
+nav button {
+  height: 40px;
+  width: 90px;
+  border-style: none;
+  border-radius: 50px;
+  margin: 30px 20px;
+  font-size: 1em;
+  color: #fff;
+  background: transparent;
+  transition: border 500ms ease;
+  transition: background 500ms ease;
+  cursor: pointer;
+}
+
+#signin {
+  transform-origin: left;
+}
+
+#signin:hover, #signup:hover {
+  border: solid 1px white;
+}
+
+/* IDEA: text animation */
+.heading {
+  padding: 10px;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  font-size: 3em;
+  height: 250px;
+  overflow: hidden;
+  border-bottom: solid 4px #65cb7c;
+}
+
+.description {
+  padding: 10px;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  top: 55%;
+  font-size: 1em;
+  width: 600px;
+  height: 100px;
+  overflow: hidden;
+  /* border: solid 2px white; */
+}
+
+.text {
+  margin-left: 20px;
+  position: relative;
+  bottom: -110%;
+  transition: bottom 1s ease 0.5s;
+  line-height: normal;
+}
+
+/* IDEA: the footer */
+footer {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+#copyright {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+#copyright img {
+  margin-right: -10px;
+}

@@ -6,11 +6,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>CTF v5</title>
+  <link href="styles/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <h1>CTF v5</h1>
-  <p>comming soon</p>
+  <!-- https://hafribilal.github.io/CTF5/ -->
+
+  <main>
+    <nav>
+      <table>
+        <tr>
+          <td>
+            <a href="#"><img src="imgs/Scores.svg" alt="stats">
+              Scores</a>
+          </td>
+          <td>
+            <button id="signin" type="button" name="button">Login</button>
+          </td>
+          <td>
+            <button class="selected" id="signup" type="button" name="button">Signup</button>
+          </td>
+        </tr>
+      </table>
+    </nav>
+    <aside id="aside">
+      <form class="signin" action="index.html" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <span id="check"><input id="rememberMe" type="checkbox" name="rememberMe" value="true">
+          <label for="rememberMe">Remember me</label></span>
+        <button type="submit" name="signin">Have fun</button>
+      </form>
+      <form class="signup" action="index.html" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="password" placeholder="comfirm" required>
+        <span id="check"><input id="iAgree" type="checkbox" name="rememberMe" value="true">
+          <label for="iAgree">I read and agree with <a href="#">terms</a>.</label></span>
+        <button type="submit" name="signup">Get Started</button>
+      </form>
+    </aside>
+    <img id="logo" src="imgs/ctf.svg" alt="(Capture The Flag)">
+    <section class="heading">
+      <div class="text">
+        <h1> Are you Ready</h1>
+        <h1>for the challenge</h1>
+      </div>
+
+    </section>
+    <section class="description">
+      <p class="text">CTF <u>(Capture The Flag)</u> is a kind of information security competition that challenges contestants to solve a variety of tasks ranging from a scavenger hunt on wikipedia to basic programming exercises, to hacking your way
+        into a
+        server to
+        steal data.</p>
+    </section>
+    <img id="five" src="imgs/five.svg" alt="CTF v.five">
+    <div class="boxes">
+      <div class="g g1">
+        <div class="box b1"></div>
+        <div class="box b2"></div>
+        <div class="box b3"></div>
+      </div>
+      <div class="g g2">
+        <div class="box b1"></div>
+        <div class="box b2"></div>
+      </div>
+      <div class="g3">
+        <div class="box b1"></div>
+      </div>
+      <div class="g4">
+        <div class="box b1"></div>
+      </div>
+    </div>
+    <footer>
+      <p>join to us in <a href="https://goo.gl/maps/w4ZojnG7dSSZkrod6"><b>ISTA CA - El Jadida</b></a>.</p>
+
+      <span id="copyright"><img id="ofppt" src="imgs/ofppt.svg" alt="ISTA">
+        @2019 <i>all right reserved</i></span>
+    </footer>
+  </main>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
