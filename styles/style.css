@@ -278,6 +278,7 @@ nav td {
   background: #00D080;
   width: 150px;
   transition: width 500ms ease;
+  box-shadow: 0 2px 5px black;
 }
 
 nav button {
