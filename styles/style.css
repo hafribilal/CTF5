@@ -74,12 +74,22 @@ body {
 }
 
 #logo {
+  width: 20vw;
+  margin-bottom: -30px;
+  position: relative;
+  padding: -15px;
+}
+
+.header {
   z-index: 1;
   position: absolute;
-  top: 40px;
+  top: 20px;
   margin-left: 20px;
   left: 20vh;
-  width: 20vw;
+  /* text-align: center; */
+  color: white;
+  font-size: 1em;
+  font-weight: italic;
 }
 
 #ofppt {
