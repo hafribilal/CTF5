@@ -50,5 +50,6 @@ function closeAside() {
   const animationText = document.querySelectorAll(".text");
   animationText[0].style.bottom = "0%";
   animationText[1].style.bottom = "0%";
+  document.querySelector(".heading").style.width = "auto";
 }
 window.onload = closeAside();

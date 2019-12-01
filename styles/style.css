@@ -265,6 +265,7 @@ nav button {
 /* IDEA: text animation */
 .heading {
   padding: 10px;
+  width: 0;
   color: white;
   position: absolute;
   z-index: 1;
@@ -273,6 +274,7 @@ nav button {
   height: 250px;
   overflow: hidden;
   border-bottom: solid 4px #65cb7c;
+  transition: width 1s ease 0.5s;
 }
 
 .description {
@@ -292,7 +294,7 @@ nav button {
   margin-left: 20px;
   position: relative;
   bottom: -110%;
-  transition: bottom 1s ease 0.5s;
+  transition: bottom 1s ease 1s;
   line-height: normal;
 }
 
