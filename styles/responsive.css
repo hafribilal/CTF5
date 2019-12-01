@@ -18,8 +18,8 @@
 
 @media screen and (max-width: 800px) {
   body {
-    overflow-x: visible;
-    overflow-y: hidden;
+    overflow-y: visible;
+    overflow-x: hidden;
   }
 
   .box {
@@ -29,6 +29,7 @@
 
   aside {
     z-index: 10;
+    right: 0;
   }
 
   .header {
@@ -65,5 +66,39 @@
 
   .description .text {
     padding-right: 30px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  nav button {
+    width: 40px;
+  }
+
+  aside {
+    width: 0;
+  }
+
+  .selected {
+    width: 100px;
+  }
+
+  nav td {
+    width: auto;
+  }
+
+  .description {
+    top: 66%;
+    height: 170px;
+  }
+
+  .description .text {
+    width: 90vw;
+    font-size: 0.9em;
+  }
+
+  footer {
+    z-index: 0;
+    position: fixed;
+    opacity: 0.5;
   }
 }

@@ -46,6 +46,7 @@ function openAside(form, selected) {
   signupForm.style.display = "none";
   form.style.display = "flex";
   document.querySelector("#five").style.top = "30%";
+
   // aside.pseudo("::before").style.height = "40px";
 }
 function mOpenAside(form, selected) {
@@ -58,9 +59,15 @@ function mOpenAside(form, selected) {
   signupForm.style.display = "none";
   form.style.display = "flex";
   document.querySelector("#five").style.top = "30%";
+  document.querySelector("body").style.overflow = "hidden";
 }
 function closeAside() {
-  aside.style.width = "5px";
+  if (window.screen.width <= 400) {
+    aside.style.width = 0;
+    document.querySelector("body").style.overflowY = "visible";
+  } else {
+    aside.style.width = "5px";
+  }
   aside.style.opacity = "1";
   signin.className = "";
   signup.className = "selected";
