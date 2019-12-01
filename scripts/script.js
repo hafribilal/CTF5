@@ -9,7 +9,11 @@ let signinClosed = true,
 // IDEA: click events
 signin.addEventListener("click", function() {
   if (signinClosed) {
-    openAside(signinForm, signin);
+    if (window.screen.width > 800) {
+      openAside(signinForm, signin);
+    } else {
+      mOpenAside(signinForm, signin);
+    }
     signinClosed = false;
     signupClosed = true;
   } else {
@@ -19,7 +23,11 @@ signin.addEventListener("click", function() {
 });
 signup.addEventListener("click", function() {
   if (signupClosed) {
-    openAside(signupForm, signup);
+    if (window.screen.width > 800) {
+      openAside(signupForm, signup);
+    } else {
+      mOpenAside(signupForm, signup);
+    }
     signupClosed = false;
     signinClosed = true;
   } else {
@@ -31,6 +39,18 @@ signup.addEventListener("click", function() {
 function openAside(form, selected) {
   aside.style.width = "40vw";
   aside.style.opacity = "75%";
+  signin.className = "";
+  signup.className = "";
+  selected.className = "selected";
+  signinForm.style.display = "none";
+  signupForm.style.display = "none";
+  form.style.display = "flex";
+  document.querySelector("#five").style.top = "30%";
+  // aside.pseudo("::before").style.height = "40px";
+}
+function mOpenAside(form, selected) {
+  aside.style.width = "100vw";
+  aside.style.opacity = "90%";
   signin.className = "";
   signup.className = "";
   selected.className = "selected";

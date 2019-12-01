@@ -117,20 +117,19 @@ aside {
   transition: opacity 500ms ease;
 }
 
-aside ::before {
+/* aside ::before {
   content: '';
   position: absolute;
   top: 32px;
   right: 109px;
   z-index: -1;
-  height: 40px;
+  //height: 40px;
   width: 290px;
   background: rgb(44, 113, 59);
   border-radius: 30px;
   transition: width 500ms ease-out;
   transition: opacity 500ms ease;
-}
-
+} */
 .signin, .signup {
   display: none;
 }
@@ -233,6 +232,37 @@ nav a :hover::before, nav a :focus::before {
   }
 }
 
+/* from astro
+nav a::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 65%;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  opacity: 0.2;
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0% 50%;
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+nav a::before {
+  background: #17c853;
+}
+
+//Hover
+
+a:hover,
+a:focus {
+  color: white;
+}
+
+a:hover a::before,
+a:focus a::before {
+  transform: scale3d(1, 1, 1);
+} */
 nav img {
   width: 20px;
   padding: 5px;
