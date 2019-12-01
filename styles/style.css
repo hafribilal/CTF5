@@ -212,9 +212,15 @@ nav a ::before {
   transition: opacity 0.6s ease;
 }
 
-nav a ::before:hover, nav a ::before:focus {
-  opacity: 0.5;
-  width: 100%;
+nav a :hover::before, nav a :focus::before {
+  animation: anim 1s forwards;
+}
+
+@keyframes anim {
+  100% {
+    opacity: 0.5;
+    width: 100%;
+  }
 }
 
 nav img {
